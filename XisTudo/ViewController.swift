@@ -1,25 +1,24 @@
-//
-//  ViewController.swift
-//  XisTudo
-//
-//  Created by Diego Gomes on 08/09/2015.
-//  Copyright (c) 2015 Nylon. All rights reserved.
-//
+
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var blockLabel: UILabel!
+
+    @IBAction func ButtonPressed(sender: UIButton) {
+        //sender new text depend of button was click
+        
+        let title = sender.titleForState(.Normal)!
+        blockLabel.text = "You click the \(title)"
+        
+        //let in swift is a constante
+        
+        //and var is variable
+        //var bucky = 22
+        //bucky = 2
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 
